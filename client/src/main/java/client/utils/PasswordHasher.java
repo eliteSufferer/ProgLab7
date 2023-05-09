@@ -1,6 +1,5 @@
 package client.utils;
 
-import server.RunServer;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -24,7 +23,6 @@ public class PasswordHasher {
             }
             return newPassword;
         } catch (NoSuchAlgorithmException exception) {
-            RunServer.logger.error("Не найден алгоритм хэширования пароля!");
             throw new IllegalStateException(exception);
         }
     }
